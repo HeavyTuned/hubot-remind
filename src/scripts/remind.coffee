@@ -61,7 +61,7 @@ module.exports = (robot) ->
       console.log id
       registerNewJobFromBrain robot, id, job...
 
-  robot.respond /what (will you remind|are your reminders)/i, (msg) ->
+  robot.respond /what (will you remind|are your reminders|are my reminders)/i, (msg) ->
     text = ''
     for id, job of JOBS
       room = job.user.reply_to || job.user.room
