@@ -59,7 +59,7 @@ module.exports = (robot) ->
   # The module is loaded right now
   robot.brain.on 'loaded', ->
     for own id, job of robot.brain.data.things
-      console.log id
+      console.log job
       registerNewJobFromBrain robot, id, job...
 
   robot.respond /what (will you remind|are your reminders|are my reminders)/i, (msg) ->
