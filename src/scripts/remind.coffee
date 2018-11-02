@@ -24,6 +24,7 @@ timeWords = {
   'd': 'day'
   'day': 'day'
   'days': 'day'
+  't' : 'day'
 }
 
 createNewJob = (robot, pattern, user, message, origin) ->
