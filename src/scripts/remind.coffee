@@ -59,9 +59,8 @@ module.exports = (robot) ->
   # The module is loaded right now
   robot.brain.on 'loaded', ->
     for own id, job of robot.brain.data.things
-      console.log job
-      console.log job[2]
-      registerNewJobFromBrain robot, id, job...
+      if job[3] != is null 
+        registerNewJobFromBrain robot, id, job...
 
   robot.respond /what (will you remind|are your reminders|are my reminders)/i, (msg) ->
     text = ''
